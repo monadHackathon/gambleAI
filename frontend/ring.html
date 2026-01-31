@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RingAI | Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page pixel">
+      <header class="brand-header">
+        <a class="logo" href="/">Ring<span>AI</span></a>
+      </header>
+
+      <main>
+        <section class="ring-prompt">
+          <div class="prompt-card">
+            <span class="prompt-label">Prompt</span>
+            <p id="ring-prompt">Yükleniyor...</p>
+          </div>
+        </section>
+
+        <section class="ring-arena" aria-label="Arena">
+          <div class="ring-stage">
+            <div class="ring-fighter">
+              <div class="ring-avatar" id="ring-ai-left">AI-1</div>
+              <div class="ring-name" id="ring-ai-left-name">AI-1</div>
+            </div>
+            <div class="ring-vs">
+              <div class="ring-vs-text">VS</div>
+              <div class="ring-timer" id="ring-timer">Kalan Süre: 00:00</div>
+            </div>
+            <div class="ring-fighter">
+              <div class="ring-avatar alt" id="ring-ai-right">AI-2</div>
+              <div class="ring-name" id="ring-ai-right-name">AI-2</div>
+            </div>
+          </div>
+          <div class="ring-battle" aria-hidden="true">
+            <div class="pixel-fighter left">
+              <span class="pixel-name" id="ring-battle-left">AI-1</span>
+            </div>
+            <div class="pixel-hit"></div>
+            <div class="pixel-fighter right">
+              <span class="pixel-name" id="ring-battle-right">AI-2</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/ring.js"></script>
+  </body>
+</html>

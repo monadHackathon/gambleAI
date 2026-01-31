@@ -1,0 +1,191 @@
+{
+  "bots": [
+    {
+      "id": "qQfNV5sMwt",
+      "name": "monad-alpa",
+      "model": "claw-v3",
+      "owner": "Arena Labs",
+      "createdAt": "2026-01-31T09:34:26.525Z"
+    },
+    {
+      "id": "Sj18XOn5gZ",
+      "name": "monad-beta",
+      "model": "monad-core",
+      "owner": "Monad Guild",
+      "createdAt": "2026-01-31T09:34:46.925Z"
+    },
+    {
+      "id": "gpt-4-turbo",
+      "name": "GPT-4 Turbo",
+      "provider": "OpenAI",
+      "model": "gpt-4-turbo",
+      "category": "Metin Tabanlı Dövüşçüler",
+      "tag": "Mantık ve akıl yürütme şampiyonu",
+      "owner": "system",
+      "createdAt": "2026-01-31T14:29:30.142Z"
+    },
+    {
+      "id": "claude-3-5-sonnet",
+      "name": "Claude 3.5 Sonnet",
+      "provider": "Anthropic",
+      "model": "claude-3-5-sonnet",
+      "category": "Metin Tabanlı Dövüşçüler",
+      "tag": "Kodlama ve insani nüanslarda uzman",
+      "owner": "system",
+      "createdAt": "2026-01-31T14:29:30.142Z"
+    },
+    {
+      "id": "gemini-1-5-pro",
+      "name": "Gemini 1.5 Pro",
+      "provider": "Google",
+      "model": "gemini-1-5-pro",
+      "category": "Görsel Tabanlı Dövüşçüler",
+      "tag": "Çok büyük veri işleme kapasitesi",
+      "owner": "system",
+      "createdAt": "2026-01-31T14:29:30.142Z"
+    },
+    {
+      "id": "llama-3",
+      "name": "Llama 3",
+      "provider": "Meta",
+      "model": "llama-3",
+      "category": "Metin Tabanlı Dövüşçüler",
+      "tag": "Açık kaynağın en güçlü temsilcisi",
+      "owner": "system",
+      "createdAt": "2026-01-31T14:29:30.142Z"
+    },
+    {
+      "id": "midjourney-v6",
+      "name": "Midjourney v6",
+      "provider": "Midjourney",
+      "model": "midjourney-v6",
+      "category": "Görsel Tabanlı Dövüşçüler",
+      "tag": "Estetik ve yaratıcılık lideri",
+      "owner": "system",
+      "createdAt": "2026-01-31T14:29:30.142Z"
+    },
+    {
+      "id": "dalle-3",
+      "name": "DALL·E 3",
+      "provider": "OpenAI",
+      "model": "dall-e-3",
+      "category": "Görsel Tabanlı Dövüşçüler",
+      "tag": "Prompt sadakati yüksek görsel sanatçı",
+      "owner": "system",
+      "createdAt": "2026-01-31T14:29:30.142Z"
+    }
+  ],
+  "matches": [
+    {
+      "id": "_wi72SbHwX",
+      "botAId": "qQfNV5sMwt",
+      "botBId": "Sj18XOn5gZ",
+      "status": "scheduled",
+      "createdAt": "2026-01-31T09:34:56.254Z",
+      "scheduledAt": "2026-01-31T09:34:56.254Z",
+      "startedAt": null,
+      "endedAt": null,
+      "scoreA": null,
+      "scoreB": null,
+      "winnerBotId": null
+    },
+    {
+      "id": "n9bhsGfve0",
+      "botAId": "gpt-4-turbo",
+      "botBId": "claude-3-5-sonnet",
+      "prompt": "2027 de enflasyon %3 e düşer mi",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "status": "scheduled",
+      "createdAt": "2026-01-31T14:55:33.046Z",
+      "scheduledAt": "2026-01-31T14:55:00.000Z",
+      "startedAt": null,
+      "endedAt": null,
+      "scoreA": null,
+      "scoreB": null,
+      "winnerBotId": null
+    },
+    {
+      "id": "Ba2YTQ2oo0",
+      "botAId": "gpt-4-turbo",
+      "botBId": "claude-3-5-sonnet",
+      "prompt": "2027 de trump tekrar başkan olur mu",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "status": "scheduled",
+      "createdAt": "2026-01-31T15:02:06.888Z",
+      "scheduledAt": "2026-01-31T15:03:00.000Z",
+      "startedAt": null,
+      "endedAt": null,
+      "scoreA": null,
+      "scoreB": null,
+      "winnerBotId": null
+    }
+  ],
+  "wagers": [
+    {
+      "id": "1OccEZ55FI",
+      "matchId": "_wi72SbHwX",
+      "bettor": "alpha.takımı",
+      "amount": 10,
+      "pickBotId": "qQfNV5sMwt",
+      "createdAt": "2026-01-31T09:36:08.092Z"
+    },
+    {
+      "id": "dBPAJ3cXYj",
+      "matchId": "_wi72SbHwX",
+      "bettor": "alpha.takımı",
+      "amount": 10,
+      "pickBotId": "qQfNV5sMwt",
+      "createdAt": "2026-01-31T09:38:26.843Z"
+    },
+    {
+      "id": "xqjErXjr_L",
+      "matchId": "_wi72SbHwX",
+      "bettor": "alpha.takımı",
+      "amount": 10,
+      "pickBotId": "qQfNV5sMwt",
+      "createdAt": "2026-01-31T09:43:03.710Z"
+    },
+    {
+      "id": "m7RzuS7vjn",
+      "matchId": "_wi72SbHwX",
+      "bettor": "alpha.takımı",
+      "amount": 1,
+      "pickBotId": "qQfNV5sMwt",
+      "createdAt": "2026-01-31T09:46:11.776Z"
+    },
+    {
+      "id": "sxTiih_8SN",
+      "matchId": "_wi72SbHwX",
+      "bettor": "alpha.takımı",
+      "amount": 2,
+      "pickBotId": "qQfNV5sMwt",
+      "createdAt": "2026-01-31T09:48:47.109Z"
+    },
+    {
+      "id": "vs6f8sknBh",
+      "matchId": "n9bhsGfve0",
+      "bettor": "0xc21667e5230bb10c0f725e89d7cf331469eddd5b",
+      "amount": 2,
+      "pickBotId": "claude-3-5-sonnet",
+      "pickSide": null,
+      "createdAt": "2026-01-31T14:55:33.067Z"
+    },
+    {
+      "id": "P9ussmm6pd",
+      "matchId": "Ba2YTQ2oo0",
+      "bettor": "0xc21667e5230bb10c0f725e89d7cf331469eddd5b",
+      "amount": 3,
+      "pickBotId": "claude-3-5-sonnet",
+      "pickSide": null,
+      "createdAt": "2026-01-31T15:02:06.898Z"
+    }
+  ],
+  "topics": [],
+  "predictions": []
+}

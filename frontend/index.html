@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Monad x ClawDBot | Ekonomi Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page pixel">
+      <header class="brand-header">
+        <div class="logo">Ring<span>AI</span></div>
+        <nav class="nav">
+          <a href="#overview">Özet</a>
+          <a href="#panel">Panel</a>
+          <a href="#arena" id="nav-arena">Arena</a>
+          <a href="bets.html" id="nav-bets">İddialar</a>
+        </nav>
+        <div class="wallet">
+          <button class="ghost small" id="wallet-connect">Cüzdan Bağla</button>
+          <span class="wallet-status" id="wallet-status">Bağlı değil</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="overview">
+          <div class="hero-content align-left">
+            <h1>Monad Üzerinde Otonom Tahmin Pazarı Prototipi</h1>
+            <p>
+              Kullanıcılar prompt ile konu oluşturur. AI analistleri Monad üzerinde yarışır,
+              doğru tahmin yapanlar havuzu paylaşır.
+            </p>
+          </div>
+        </section>
+
+        <section class="panel-section" id="panel">
+          <div class="section-header">
+            <h2>Tahmin Paneli</h2>
+            <p>Prompt oluştur, tahmin seç ve cüzdan bağlıysa iddianı gönder.</p>
+          </div>
+          <div class="panel-grid">
+            <div class="panel pixel-card">
+              <div class="panel-header">
+                <h3>Prompt Gir</h3>
+              </div>
+              <form class="form" id="market-form">
+                <div class="input-group">
+                  <label for="market-prompt">Konu / Prompt</label>
+                  <textarea
+                    id="market-prompt"
+                    name="prompt"
+                    rows="3"
+                    placeholder="2027'de global enflasyon %3 altına iner mi?"
+                    required
+                  ></textarea>
+                </div>
+                <div class="input-group">
+                  <label for="market-time">Yayın Zamanı</label>
+                  <input id="market-time" name="scheduledAt" type="datetime-local" />
+                </div>
+              </form>
+              <p class="form-message" id="market-message"></p>
+            </div>
+
+            <div class="panel pixel-card">
+              <div class="panel-header">
+                <h3>AI Model Seç</h3>
+              </div>
+              <form class="form" id="bot-form">
+                <div class="input-group">
+                  <label for="bot-a">AI Model 1</label>
+                  <select id="bot-a" name="botAId" required>
+                    <option value="gpt-4-turbo">OpenAI - GPT-4 Turbo</option>
+                    <option value="claude-3-5-sonnet">Anthropic - Claude 3.5 Sonnet</option>
+                    <option value="gemini-1-5-pro">Google - Gemini 1.5 Pro</option>
+                    <option value="llama-3">Meta - Llama 3</option>
+                    <option value="midjourney-v6">Midjourney - Midjourney v6</option>
+                    <option value="dalle-3">OpenAI - DALL·E 3</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label for="bot-b">AI Model 2</label>
+                  <select id="bot-b" name="botBId" required>
+                    <option value="gpt-4-turbo">OpenAI - GPT-4 Turbo</option>
+                    <option value="claude-3-5-sonnet">Anthropic - Claude 3.5 Sonnet</option>
+                    <option value="gemini-1-5-pro">Google - Gemini 1.5 Pro</option>
+                    <option value="llama-3">Meta - Llama 3</option>
+                    <option value="midjourney-v6">Midjourney - Midjourney v6</option>
+                    <option value="dalle-3">OpenAI - DALL·E 3</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+
+            <div class="panel pixel-card">
+              <div class="panel-header">
+                <h3>İddia Gönder</h3>
+              </div>
+              <form class="form" id="wager-form">
+                <div class="input-group">
+                  <label for="wager-wallet">Cüzdan</label>
+                  <input id="wager-wallet" name="bettorWallet" placeholder="0x..." />
+                </div>
+                <div class="input-group">
+                  <label for="wager-pick">Seçilen AI</label>
+                  <select id="wager-pick" name="pickBotId" required></select>
+                </div>
+                <div class="input-group">
+                  <label for="wager-amount">Miktar (MONAD)</label>
+                  <input id="wager-amount" name="amount" type="number" min="1" value="10" required />
+                </div>
+              </form>
+              <p class="form-message" id="wager-message"></p>
+            </div>
+          </div>
+          <div class="bets-cta">
+            <button class="primary" id="create-bet" type="button">İddia Oluştur</button>
+          </div>
+        </section>
+
+        <section class="arena-section is-hidden" id="arena">
+          <div class="section-header">
+            <h2>AI Arena</h2>
+            <p>Monad maskotları ile dövüş arenası. Seçilen iddiayı burada oynat.</p>
+          </div>
+          <div class="arena-ring" id="arena-track">
+            <div class="arena-fighter" id="fighter-left">
+              <div class="mascot-badge" data-name="SALMONAD"></div>
+            </div>
+            <div class="arena-center">
+              <div class="arena-prompt" id="arena-prompt">Bir iddia seçin ve oynatın.</div>
+              <div class="arena-vs">VS</div>
+              <a class="primary" id="open-bets" href="bets.html">İddialara Git</a>
+            </div>
+            <div class="arena-fighter" id="fighter-right">
+              <div class="mascot-badge alt" data-name="CHOG"></div>
+            </div>
+          </div>
+          <div class="arena-result" id="arena-result"></div>
+        </section>
+
+        <section class="bets-cta" aria-label="İddialara git">
+          <a class="primary" href="bets.html#bets" target="_blank" rel="noreferrer">İddialara Git</a>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
