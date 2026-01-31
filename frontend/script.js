@@ -459,7 +459,7 @@ function renderBets() {
             <span class="muted">Kalan süre: 00:00:00</span>
             <span>Pot: ${market.summary?.totalPot || 0} MONAD</span>
           </div>
-          <a class="ghost small" href="/ring/${market.id}">Ring'e Git</a>
+          <a class="ghost small" href="ring.html?id=${market.id}">Ring'e Git</a>
         </div>
       `;
     })
@@ -470,7 +470,7 @@ function initBetRouting() {
   if (!betsList) return;
   const goToRing = (betId) => {
     if (!betId) return;
-    window.location.assign(`/ring/${betId}`);
+    window.location.assign(`ring.html?id=${betId}`);
   };
 
   betsList.addEventListener('click', (event) => {
